@@ -10,7 +10,7 @@
     use PHPMailer\PHPMailer\Exception;
     $mail = new PHPMailer(true);
     try{
-        $mail->SMTPDebug = 1;
+        $mail->SMTPDebug = 0;
         $mail->CharSet = 'UTF-8;';
         $mail->isSMTP();
         $mail->Host = 'smtp.titan.email';
@@ -30,7 +30,7 @@
             echo '<script> window.location = "'.$url.'";</script>';
         }else{
             echo"<script> window.alert ('Erro ao enviar Email, teste novamente') </script>";
-            $url = "../contacto.php";
+            $url = "../contacto.html";
             echo '<script> window.location = "'.$url.'";</script>';
         }
     } catch(Exception $e){
