@@ -15,6 +15,10 @@ function init() {
   var width = 200;
   var height = 100;
   var link = window.location.href;
+  var currentPage = link.split('/').pop()
+  if(currentPage != ''){
+    link = link.split(currentPage)[0];
+  }
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
 	l1.setCrossOrigin('Anonymous');
