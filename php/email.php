@@ -26,7 +26,7 @@
         $mail->Body = "Olá, meu nome é $nome, email: $email e esta é minha mensagem: $mensagem";
         if($mail->send()){
             echo"<script> window.alert ('Email enviado com sucesso') </script>";
-            $url = "../contacto.php";
+            $url = "../contacto.html";
             echo '<script> window.location = "'.$url.'";</script>';
         }else{
             echo"<script> window.alert ('Erro ao enviar Email, teste novamente') </script>";
